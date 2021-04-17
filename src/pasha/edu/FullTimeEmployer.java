@@ -5,7 +5,7 @@ package pasha.edu;
 @DATE: 17.04.2021
 @NAME: FullTimeEmployer
 */
-public class FullTimeEmployer {
+public class FullTimeEmployer implements IAccounting {
     private String name;
     private String experience;
     private Integer rate;
@@ -61,5 +61,10 @@ public class FullTimeEmployer {
                 ", rate=" + rate +
                 ", speciality='" + speciality + '\'' +
                 '}';
+    }
+
+    @Override
+    public int getSalary() {
+        return 22*8*this.getRate();
     }
 }
