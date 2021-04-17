@@ -47,10 +47,9 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", birthday=" + birthday +
-                ", mark=" + mark +
-                '}';
+        return "Инфо. Студента " +
+                "Имя :'" + name + '\'' +
+                " Дата Рождения :=" + birthday +
+                " Оценка на Java " + mark ;
     }
 }
