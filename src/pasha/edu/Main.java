@@ -48,6 +48,13 @@ public class Main {
 
         System.out.println(students.stream().filter(el -> el.getMark() > 80).count());
 
-        System.out.println(students.stream().min(Comparator.comparing(student -> student.getName())));
+        System.out.println(students.stream().max(Comparator.comparing(student -> student.getMark())));
+        System.out.println(students.stream().mapToInt(student -> student.getMark()).max().getAsInt());
+        System.out.println(students.stream().mapToInt(student -> student.getMark()).min().getAsInt());
+        System.out.println(students.stream().mapToInt(student -> student.getMark()).sum());
+        System.out.println(students.stream().mapToInt(student -> student.getMark()).average().getAsDouble());
+        System.out.println(students.stream().count());
+
+
     }
 }
